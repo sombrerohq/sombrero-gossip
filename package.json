@@ -1,0 +1,43 @@
+{
+  "name": "sombrero-gossip",
+  "version": "0.1.0",
+  "description": "Sombrero Gossip Network",
+  "scripts": {
+    "test": "istanbul cover lab -- -v  tests/*.js -l && istanbul check-coverage --statements 60 --functions 60 --  lines 65 --branches 60",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+    "codestyle": "jscs -p google lib/ tests/",
+    "coverage": "open coverage/lcov-report/index.html"
+  },
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sombrerohq/sombrero-gossip.git"
+  },
+  "keywords": [
+    "gossip",
+    "server",
+    "client",
+    "network"
+  ],
+  "author": "pgte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sombrerohq/sombrero-gossip/issues"
+  },
+  "homepage": "https://github.com/sombrerohq/sombrero-gossip",
+  "devDependencies": {
+    "istanbul": "^0.3.2",
+    "jscs": "^1.6.2",
+    "jshint": "^2.5.6",
+    "lab": "^4.5.1"
+  },
+  "dependencies": {
+    "crdt": "^3.6.4",
+    "xtend": "^4.0.0"
+  },
+  "pre-commit": [
+    "codestyle",
+    "jshint",
+    "test"
+  ]
+}
