@@ -18,7 +18,8 @@ describe('gossip', function() {
 
   it('can get created with initial peers', function(done) {
     gossip = Gossip({
-      peers: [{id: 'peer id', hostname: 'localhost', port: 8081}]
+      peers: [{id: 'peer id', hostname: 'localhost', port: 8081}],
+      port: 7623
     });
     gossip.eachPeer(function(peer) {
       assert.deepEqual(
