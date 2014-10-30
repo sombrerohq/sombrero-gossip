@@ -28,6 +28,18 @@ var gossip = Gossip(options);
 
 ## API
 
+### gossip.addPeer(peer)
+
+Add a peer. A peer must have the following attributes:
+
+* id
+* hostname
+* port
+
+### gossip.removePeer(peerId)
+
+Removes a peer.
+
 ### gossip.cluster.set(key, value)
 
 Set a gossip value on the cluster.
