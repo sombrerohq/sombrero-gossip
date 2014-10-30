@@ -21,7 +21,8 @@ describe('gossip', function() {
       peers: [{id: 'peer id', hostname: 'localhost', port: 8081}]
     });
     gossip.eachPeer(function(peer) {
-      assert.deepEqual(peer, {id: 'peer id', hostname: 'localhost', port: 8081});
+      assert.deepEqual(
+        peer, {id: 'peer id', hostname: 'localhost', port: 8081});
       done();
     });
   });
@@ -41,7 +42,8 @@ describe('gossip', function() {
   it('can add peer', function(done) {
     gossip.addPeer({id: 'peer id', hostname: 'localhost', port: 8001});
     gossip.eachPeer(function(peer) {
-      assert.deepEqual(peer, {id: 'peer id', hostname: 'localhost', port: 8001});
+      assert.deepEqual(
+        peer, {id: 'peer id', hostname: 'localhost', port: 8001});
       done();
     });
   });
@@ -52,13 +54,13 @@ describe('gossip', function() {
   });
 
   it('remove worked', function(done) {
-    gossip.eachPeer(function(peer) {
+    gossip.eachPeer(function() {
       assert(false, 'should not have peers');
     });
     done();
   });
 
-  it('can get closed', function(done) {
-    gossip.close(done);
+  it('can get stopped', function(done) {
+    gossip.stop(done);
   });
 });
