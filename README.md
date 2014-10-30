@@ -1,6 +1,7 @@
 # Sombrero Gossip
 
 [![Build Status](https://travis-ci.org/sombrerohq/sombrero-gossip.svg)](https://travis-ci.org/sombrerohq/sombrero-gossip)
+[![Dependency Status](https://david-dm.org/sombrerohq/sombrero-gossip.svg)](https://david-dm.org/sombrerohq/sombrero-gossip)
 
 To be used as part of a Sombrero Node. Implements a gossip protocol over a set of peers.
 
